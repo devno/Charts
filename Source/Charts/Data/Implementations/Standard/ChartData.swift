@@ -449,7 +449,14 @@ extension ChartData: MutableCollection
 
     public subscript(position: Index) -> Element
     {
-        get { return dataSets[position] }
+        get {
+            if dataSets.indices.contains(position) {
+                return dataSets[position]
+            }
+            else {
+                return ChartDataSet()
+            }
+        }
         set { self._dataSets[position] = newValue }
     }
 }
