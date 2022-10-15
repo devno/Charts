@@ -364,7 +364,7 @@ open class BarChartRenderer: BarLineScatterCandleBubbleRenderer
         
         // In case the chart is stacked, we need to accomodate individual bars within accessibilityOrdereredElements
         let isStacked = dataSet.isStacked
-        let stackSize = isStacked ? dataSet.stackSize : 1
+//        let stackSize = isStacked ? dataSet.stackSize : 1
 
         for j in buffer.indices
         {
